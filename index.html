@@ -1774,7 +1774,7 @@
 
             @media (max-width: 991px) {
                 body {
-                    padding-top: 70px;
+                    padding-top: 65px;
                 }
             }
         </style>
@@ -2005,8 +2005,8 @@
                 style="aspect-ratio: 1440/592;">
             <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
                 class="rocket-lazyload w-full md:hidden" style="aspect-ratio: 1/1;"
-                data-lazy-src="https://cdn.assetwise.co.th/wp-content/uploads/2024/02/webmobile.png"><noscript><img
-                    loading="lazy" src="https://cdn.assetwise.co.th/wp-content/uploads/2024/02/webmobile.png"
+                data-lazy-src="/image/Image_1.png"><noscript><img
+                    loading="lazy" src="/image/Image_1.png"
                     class="rocket-lazyload w-full md:hidden" style="aspect-ratio: 1/1;"></noscript>
         </section>
         <style type="text/css">
@@ -4031,22 +4031,29 @@
                         .gallery-rail {
                             --w: calc(var(--container) * var(--g) / (100/62)) !important;
                             width: var(--w) !important;
+                            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+                            display: flex; 
                         }
 
                         .gallery-rail[data-end="1"] {
                             left: 592px !important;
                         }
 
-                        .gallery-group-items:nth-child(2) {
-                            width: 100% !important;
+                        .gallery-group-items {
+                            box-sizing: border-box;
+                        }
+
+                         .gallery-group-items:nth-child(1) {
+                            width: 200% !important;
+                            display: grid !important;
+                            gap: 20px !important;
                             grid-template-columns: repeat(3, 1fr) !important;
                             grid-template-rows: repeat(3, 1fr) !important;
                         }
 
-                        .gallery-group-items:nth-child(1) {
-                            width: 200% !important;
+                        .gallery-group-items:nth-child(2) {
+                            width: 100% !important;
                             display: grid !important;
-                            gap: 20px !important;
                             grid-template-columns: repeat(3, 1fr) !important;
                             grid-template-rows: repeat(3, 1fr) !important;
                         }
@@ -4055,19 +4062,20 @@
                             width: 100% !important;
                             display: grid !important;
                             gap: 16px !important;
-                            grid-template-columns: repeat(3, 1fr) !important;
-                            grid-template-rows: 1fr !important;
-                        }
-
-                        .gallery-group-items:nth-child(3) {
-                            grid-column: auto !important;
-                            grid-row: auto !important;
+                            grid-template-rows: repeat(3, 1fr) !important;
+                            grid-template-columns: 1fr !important;
                         }
 
                         .gallery-group-item {
                             grid-column: span 3 !important;
                             grid-row: span 3 !important;
                         }
+
+                        .gallery-wrap .gallery-group-items:nth-child(3) .gallery-group-item {
+                            grid-column: auto !important;
+                            grid-row: auto !important;
+                        }
+
                     </style>
                     <div class="gallery-rail" data-end="0" data-i="0" data-max="2" style="--g:3; --max: 2;">
 
@@ -4115,9 +4123,9 @@
                             </div>
                             <div class="gallery-group-item">
                                 <div class="gallery-img relative w-full h-96 overflow-hidden">
-                                    <img src="/image/gallery//gallery_4.jpg" alt="Gallery 6" loading="lazy"
+                                    <img src="/image/gallery/gallery_4.jpg" alt="Gallery 6" loading="lazy"
                                         class="jb-lightbox w-full h-full object-cover" data-jb-lightbox="d"
-                                        style="--img: url('/image/gallery//gallery_4.jpg');">
+                                        style="--img: url('/image/gallery/gallery_4.jpg');">
                                 </div>
                             </div>
                         </div>
@@ -4144,103 +4152,62 @@
                 <style>
                     @media (max-width: 1319px) {
 
-                        .gallery-wrap,
-                        .gallery-nav-wrap {
-                            display: none;
-                        }
-
-                        .gallery-m-wrap,
-                        .gallery-nav-m-wrap {
-                            display: block;
-                        }
-
-                        .gallery-nav-m-wrap {
-                            padding: 0.75rem 0;
+                        .gallery-wrap, .gallery-nav-wrap {
+                            display: block !important;
                         }
 
                         .gallery-rail {
-                            width: calc(90% * var(--g));
-                            transform: translateX(calc((var(--container) * -0.26 * var(--i)) - var(--i) * 1px));
-                            padding-left: 1rem;
-                            --mg: 1rem
+                            width: 300% !important;
+                            left: 0 !important;
+                            transform: translateX(calc(var(--i) * -33.33%)) !important;
                         }
 
                         .gallery-group-items {
-                            gap: 8px;
+                            width: 33.33% !important;
+                            display: grid !important;
+                            grid-template-columns: repeat(12, 1fr) !important;
+                            grid-template-rows: auto !important;
+                            gap: 8px !important;
+                            padding: 0 10px;
                         }
 
-                        .gallery-hightlight {
-                            top: 2rem;
-                            width: 90%;
-                            position: absolute;
-                            left: 1rem;
+                        .gallery-group-items:nth-child(1) .gallery-group-item {
+                            grid-column: span 12 !important; height: 300px !important;
+                        }
+                        .gallery-group-items:nth-child(2) .gallery-group-item {
+                            grid-column: span 6 !important; height: 200px !important; margin-bottom: 0 !important;
+                        }
+                        .gallery-group-items:nth-child(3) { grid-template-rows: auto auto !important; }
+                        .gallery-group-items:nth-child(3) .gallery-group-item:nth-child(1) {
+                            grid-column: span 12 !important; height: 250px !important;
+                        }
+                        .gallery-group-items:nth-child(3) .gallery-group-item:nth-child(n+2) {
+                            grid-column: span 6 !important; height: 150px !important;
                         }
 
-                        #gallery-m-nav {
-                            padding-top: 1rem;
-                            display: inline-flex;
-                            justify-content: center;
-                            align-items: center;
+                        .gallery-arrow-left, .gallery-arrow-right {
+                            width: 40px !important; height: 40px !important;
+                            top: 50% !important;
+                            background-color: rgba(255, 255, 255, 0.8) !important;
+                            border-radius: 50%; 
+                            z-index: 20; 
+                            position: absolute !important;
+                            background-repeat: no-repeat !important;
+                            background-position: center !important;
                         }
-
-                        .gallery-nav-dot {
-                            width: 8px;
-                            height: 8px;
-                            background: #FFFFFF;
-                            box-shadow: inset 0px 1px 4px rgb(0 0 0 / 25%);
-                            border-radius: 100%;
-                            margin-right: 12px;
-                            transition: all .3s ease-in-out;
-                            cursor: pointer;
+                        .gallery-arrow-left { 
+                            left: 5px !important; 
+                            transform: translateY(-50%) rotate(-90deg) !important; 
                         }
-
-                        .gallery-nav-dot.-active {
-                            background: #003952 !important;
-                            width: 20px !important;
-                            border-radius: 27px !important;
+                        .gallery-arrow-right { 
+                            right: 5px !important; 
+                            transform: translateY(-50%) rotate(90deg) !important; 
                         }
-
-                        .gallery-norail {
-                            padding-top: 0;
-                            padding-bottom: 0;
-                            display: flex;
-                            justify-content: center;
-                        }
+                        
+                        .gallery-nav-line { display: none !important; }
                     }
                 </style>
                 <div class="gallery-m-wrap">
-                    <style>
-                        @media (max-width: 1319px) {
-
-                            .gallery-m-wrap {
-                                padding-top: 2rem;
-                                padding-bottom: 2rem;
-                            }
-
-                            .gallery-group {
-                                display: grid;
-                                grid-template-columns: repeat(12, 1fr);
-                                gap: 8px;
-                                grid-template-rows: auto !important;
-                            }
-
-                            .gallery-group-item:nth-child(3n+1) {
-                                grid-column: span 12;
-                            }
-
-                            .gallery-group-item {
-                                grid-column: span 6;
-                            }
-
-                            .gallery-hightlight {
-                                top: -0.75rem;
-                            }
-
-                            .gallery-img-mob {
-                                height: 250px;
-                            }
-                        }
-                    </style>
                     <div class="gallery-norail -cont-pd">
                         <div class="gallery-group">
 
@@ -4272,16 +4239,17 @@
                             </div>
                             <div class="gallery-group-item">
                                 <div class="gallery-img gallery-img-mob jb-lightbox" data-jb-lightbox="m">
-                                    <img src="/image/gallery//gallery_2.jpg" loading="lazy"
+                                    <img src="/image/gallery/gallery_2.jpg" loading="lazy" 
                                         class="object-cover w-full h-full"
-                                        style="--img: url('/image/gallery//gallery_2.jpg');">
+                                        style="--img: url('/image/gallery/gallery_2.jpg');">
                                 </div>
                             </div>
+
                             <div class="gallery-group-item">
                                 <div class="gallery-img gallery-img-mob jb-lightbox" data-jb-lightbox="m">
-                                    <img src="/image/gallery//gallery_4.jpg" loading="lazy"
+                                    <img src="/image/gallery/gallery_4.jpg" loading="lazy" 
                                         class="object-cover w-full h-full"
-                                        style="--img: url('/image/gallery//gallery_4.jpg');">
+                                        style="--img: url('/image/gallery/gallery_4.jpg');">
                                 </div>
                             </div>
 
