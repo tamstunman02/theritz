@@ -1,0 +1,377 @@
+#register {
+    background-size: cover;
+    color: #423C2A
+}
+
+.form-contact {
+    display: flex;
+    color: #000;
+    justify-content: center;
+    align-items: center
+}
+
+.form-contact .-txt {
+    width: 3em;
+    text-align: center;
+    color: var(--text-color)
+}
+
+.form-contact .-line {
+    height: 1px;
+    background: #000;
+    width: calc(40% - 2em)
+}
+
+#register .register-img {
+    aspect-ratio: 423/308;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative
+}
+
+.register-img::after {
+    content: '';
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 98%;
+    height: 100%;
+    transform: translate(18px, 8px) scaleX(1) scaleY(1);
+    border: 1px #423C2A solid;
+    pointer-events: none
+}
+
+.register-line {
+    background-color: #423C2A;
+    height: .7px
+}
+
+.register-hightlight {
+    position: absolute;
+    left: 49.2%;
+    bottom: 5%;
+    transform: rotateZ(-90deg);
+    transform-origin: top left;
+    width: 33%;
+    max-width: 648px;
+    gap: .25rem
+}
+
+.p-register-side-img {
+    padding-top: 62px;
+    padding-bottom: 77px
+}
+
+.form-template-delightful {
+    max-width: 533px;
+    display: block;
+    margin: auto;
+    margin-top: 52px;
+    color: #423C2A
+}
+
+.form-template-delightful label span {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px
+}
+
+.form-template-delightful .wpcf7-text {
+    padding: 6px 0;
+    background: transparent;
+    transition: all .3s;
+    height: 40px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    color: #003952
+}
+
+#consent_label {
+    margin-top: 14px
+}
+
+#consent_label a {
+    color: #003952;
+    text-decoration: underline
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+    display: none
+}
+
+.form-template-delightful .wpcf7-list-item label span {
+    font-size: 22px;
+    font-weight: 400
+}
+
+.wpcf7-spinner {
+    margin: em auto;
+    background: #09264788;
+    display: block
+}
+
+.form-template-delightful .wpcf7-submit {
+    padding: 6px 32px;
+    display: inline-block;
+    background: #003952;
+    border-radius: 0;
+    color: #FFEED4;
+    border: none;
+    height: auto;
+    line-height: 28px;
+    font-size: 22px;
+    font-weight: 500;
+    box-sizing: border-box;
+    width: auto;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 28px;
+    transition: all 0.5s
+}
+
+.wpcf7-not-valid-tip {
+    display: inline-block;
+    margin-right: .5em
+}
+
+.form-template-delightful .wpcf7-list-item {
+    display: inline-block;
+    margin: 0
+}
+
+.form-template-delightful .wpcf7-list-item input[type=checkbox] {
+    display: inline-block;
+    width: auto;
+    margin-right: .2em;
+    opacity: .5
+}
+
+.wpcf7-list-item label {
+    display: inline-block;
+    margin: 0
+}
+
+.form-template-delightful .form-column-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 22px 16px
+}
+
+.form-template .wpcf7-submit {
+    border-radius: 0
+}
+
+.form-template .wpcf7-submit {
+    padding: 6px 32px;
+    font-weight: 400
+}
+
+.form-template {
+    padding: 0 2rem
+}
+
+.-rotate {
+    display: flex;
+    pointer-events: none;
+    color: var(--text-color)
+}
+
+.-rotate .-line {
+    background: var(--text-color);
+    height: calc(45% - 2rem);
+    width: 1px
+}
+
+.-rotate .-txt {
+    white-space: nowrap;
+    padding-bottom: 4%;
+    padding-top: 8%
+}
+
+#form a {
+    color: var(--form--text_color--text_link) !important
+}
+
+#form {
+    padding-bottom: 0
+}
+
+.form-contact-footer {
+    padding-bottom: 36px
+}
+
+.form-column-2 label>span {
+    left: 0rem;
+    white-space: nowrap
+}
+
+.form-mob .container>img {
+    padding-top: 1.5rem;
+    padding: 0 1.5rem
+}
+
+#consent_label {
+    margin-top: 24px;
+    padding-top: 20px
+}
+
+.form-template .wpcf7-submit {
+    padding: 6px 32px;
+    font-weight: 400
+}
+
+@media (min-width:1025px) {
+    #form .pr-25px {}
+}
+
+.form-mob {
+    background-color: transparent !important
+}
+
+.form-title {
+    color: var(--form--color_swatch--heading_h2);
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+    padding-bottom: 22px
+}
+
+.form-template :is(.wpcf7-text, .wpcf7-date) {
+    border-radius: 0;
+    padding: 6px 16px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--form--form_color--border_field, #000);
+    backdrop-filter: none;
+    transition: all .3s;
+    height: 40px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    width: 100%;
+    padding-left: 0
+}
+
+.form-template :is(.wpcf7-text, .wpcf7-date):focus {
+    box-shadow: none
+}
+
+.form-template :is(.wpcf7-text, .wpcf7-date):hover {
+    background: transparent
+}
+
+.form-template :is(.wpcf7-text, .wpcf7-date):focus {
+    border: 0;
+    border-bottom: 1px solid var(--form--form_color--border_field, #000)
+}
+
+.form-template .wpcf7-submit {
+    border-radius: 0
+}
+
+.form-contact .-line {
+    height: 1px;
+    background: var(--text-color);
+    width: calc(40% - 2em)
+}
+
+.-rotate {
+    block-size: auto;
+    writing-mode: vertical-lr;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: rotateZ(180deg) translate(1rem);
+    align-items: center
+}
+
+.-rotate {
+    display: flex;
+    pointer-events: none
+}
+
+.-rotate .-line {
+    height: calc(45% - 2rem);
+    width: 1px
+}
+
+.-rotate .-txt {
+    white-space: nowrap;
+    padding-bottom: 4%;
+    padding-top: 8%
+}
+
+.col-span-6>img {
+    width: 75%;
+    margin-top: 70px
+}
+
+#form .underline-m {
+    text-decoration: underline
+}
+
+@media (max-width:1319px) {
+    #form {
+        padding-bottom: unset
+    }
+
+    #consent_label {
+        margin-top: 0;
+        padding-top: 20px
+    }
+
+    .form-title {
+        font-weight: 400 !important;
+        font-size: 38px !important;
+        line-height: 40px !important;
+        padding-top: 44px
+    }
+
+    .form-template .wpcf7-submit {
+        width: 100%
+    }
+
+    .form-contact .-line {
+        width: calc(50% - 1em)
+    }
+
+    #form .form-contact-footer {
+        padding-top: 30px !important
+    }
+
+    #form .underline-m {
+        text-decoration: underline
+    }
+
+    #form>div {
+        padding-top: 20px
+    }
+}
+
+#form select.wpcf7-form-control.wpcf7-select {
+    border-radius: 0;
+    padding: 6px 16px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--form--form_color--border_field, #000);
+    backdrop-filter: none;
+    transition: all .3s;
+    height: 40px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    width: 100%;
+    padding-left: 0
+}
+
+.form-template :is(.wpcf7-text:focus) {
+    background-color: transparent
+}
