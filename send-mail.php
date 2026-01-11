@@ -4,7 +4,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$to = 'tatiya.wpt@gmail.com';
+// $to = 'tatiya.wpt@gmail.com';
+$to = 'tamstunman02@gmail.com';
 $subject = 'มีผู้ลงทะเบียนสนใจโครงการ';
 
 $message = "
