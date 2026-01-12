@@ -1,24 +1,40 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(403);
     exit;
 }
 
-// $to = 'tatiya.wpt@gmail.com';
-$to = 'tamstunman02@gmail.com';
-$subject = 'มีผู้ลงทะเบียนสนใจโครงการ';
+// ====== รับค่าจากฟอร์ม ======
+$fname   = $_POST['Fname'] ?? '';
+$lname   = $_POST['Lname'] ?? '';
+$tel     = $_POST['Tel'] ?? '';
+$email   = $_POST['Email'] ?? '';
+$model   = $_POST['ModelInterest'] ?? '';
+$price   = $_POST['PriceInterest'] ?? '';
+$time    = $_POST['AppointTime'] ?? '';
 
+// ====== อีเมลผู้รับ ======
+$to = "tamstunman02@gmail.com"; // เปลี่ยนเป็นอีเมลที่ต้องการรับ
+$subject = "มีผู้สนใจโครงการ (ฟอร์มลงทะเบียน)";
+
+// ====== เนื้อหาเมล ======
 $message = "
-ชื่อ: {$_POST['Fname']}
-นามสกุล: {$_POST['Lname']}
-โทร: {$_POST['Tel']}
-อีเมล: {$_POST['Email']}
+ชื่อ: $fname $lname
+เบอร์โทร: $tel
+อีเมล: $email
 
-แบบบ้าน: {$_POST['ModelInterest']}
-งบประมาณ: {$_POST['PriceInterest']}
-ช่วงเวลา: {$_POST['AppointTime']}
+แบบบ้านที่สนใจ: $model
+งบประมาณ: $price
+ช่วงเวลาที่สะดวกติดต่อ: $time
 ";
 
-$headers = "Content-Type: text/plain; charset=UTF-8";
+// ====== Header ======
+$headers = "From: Website theritz-six.vercel.app\r\n";
+$headers .= "Reply-To: $email\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8";
 
-mail($to, $subject, $message, $headers);
+// ====== ส่งอีเมล ======
+if (mail($to, $subject, $message, $headers)) {
+    echo "ส่งข้อมูลเรียบร้อยแล้ว";
+} else {
+    echo "ไม่สามารถส่งอีเมลได้";
+}
