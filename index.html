@@ -1882,31 +1882,32 @@
                         <div class="-line"></div>
                     </div>
                     <div class="grid grid-cols-12 pb-10 form-contact-footer"
-                        style="padding-bottom: 18px;padding-top: 20px">
-                        <div class="col-span-3 flex flex-row justify-center items-center">
+                        style="padding-bottom: 18px; padding-top: 20px">
+                        <div class="col-span-4 flex flex-row justify-center items-center">
                             <a href="tel:098-824-2262" class="form-icon inline-flex items-center content-center"
-                                target="_blank"><span class="pr-3"><img
+                                target="_blank"><span class="shrink-0"><img
                                         src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
                                         data-lazy-src="https://cdn.assetwise.co.th/wp-content/uploads/2023/08/tel-icon-243835.png"><noscript><img
                                             src="https://cdn.assetwise.co.th/wp-content/uploads/2023/08/tel-icon-243835.png"></noscript></span><span
-                                    class="underline">098-824-2262</span></a>
+                                    class="underline whitespace-nowrap">098-824-2262</span></a>
                         </div>
-                        <div class="col-span-3 flex flex-row justify-center items-center">
+                        <div class="col-span-4 flex flex-row justify-center items-center">
                             <a href="tel:080-296-3235" class="form-icon inline-flex items-center content-center"
-                                target="_blank"><span class="pr-3"><img
+                                target="_blank"><span class="shrink-0"><img
                                         src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
                                         data-lazy-src="https://cdn.assetwise.co.th/wp-content/uploads/2023/08/tel-icon-243835.png"><noscript><img
                                             src="https://cdn.assetwise.co.th/wp-content/uploads/2023/08/tel-icon-243835.png"></noscript></span><span
-                                    class="underline">080-296-3235</span></a>
+                                    class="underline whitespace-nowrap">080-296-3235</span></a>
                         </div>
-                        <div class="col-span-6 flex flex-row justify-center items-center">
+                        <div class="col-span-4 flex flex-row justify-center items-center">
                             <a href="https://lin.ee/4fDmOHF" class="form-icon inline-flex items-center content-center"
-                                target="_blank"><span class="pr-3"><img
+                                target="_blank"><span class="shrink-0"><img
                                         src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
                                         alt=""
                                         data-lazy-src="https://cdn.assetwise.co.th/wp-content/uploads/2023/05/line-icon-4D4B4B.png"><noscript><img
                                             src="https://cdn.assetwise.co.th/wp-content/uploads/2023/05/line-icon-4D4B4B.png"
-                                            alt=""></noscript></span><span class="underline">สอบถามเพิ่มเติม</span></a>
+                                            alt=""></noscript></span><span
+                                    class="underline whitespace-nowrap">สอบถามเพิ่มเติม</span></a>
                         </div>
                     </div>
                 </div>
@@ -3661,384 +3662,277 @@
             }
         </style>
         <link data-minify="1" rel="stylesheet" type="text/css" href="./css/delightful-gallery.css">
-        <script>
-            function gallery_change() {
-                xconsolex.log()
-                let section = document.querySelector('.gallery-rail')
-                let i = document.querySelector('#gallery')
-                i.style.setProperty('--i', i.dataset.i)
-            }
 
-            function gallery_arrow(plus) {
-                let section = document.querySelector('.gallery-rail')
-                let i = document.querySelector('#gallery')
-
-                let end = parseInt(section.dataset.max)
-                let now = parseInt(i.dataset.i)
-                let next = now + plus
-
-                let arrow_right = document.querySelector('.gallery-arrow-right');
-                let arrow_left = document.querySelector('.gallery-arrow-left');
-
-                xconsolex.log('next a', next)
-
-                if (next < 0) {
-                    next = end
-
-                } else if (next > end) {
-                    next = 0
-                }
-                xconsolex.log('next', next, 'end', end)
-
-                if (next >= 0 && next <= end) {
-                    arrow_right.classList.remove('-active');
-                    arrow_left.classList.remove('-active');
-                }
-                if (next == end) {
-                    arrow_right.classList.add('-active');
-                    section.dataset.end = '1';
-                    i.dataset.end = '1';
-                } else {
-                    section.dataset.end = '0';
-                    i.dataset.end = '0';
-                }
-                if (next == 0) {
-                    arrow_left.classList.add('-active');
-                }
-                i.dataset.i = next
-
-                gallery_change()
-            }
-
-            function gallery_mobile(plus) {
-                let section = document.querySelector('.gallery-m-wrap .gallery-rail')
-                let i = document.querySelector('#gallery')
-
-                let end = parseInt(section.dataset.max)
-                let now = parseInt(i.dataset.i)
-
-                let navAll = document.querySelectorAll('.gallery-nav-dot')
-                let nav = document.querySelector('.gallery-nav-dot.-active');
-
-                xconsolex.log('next a', plus)
-                xconsolex.log('nav', navAll[plus])
-
-                nav.classList.remove('-active');
-                navAll[plus].classList.add('-active');
-                i.dataset.i = plus
-                section.dataset.end = 0;
-                if (plus + 1 == end) {
-                    section.dataset.end = 1;
-                }
-                gallery_change()
-            }
-        </script>
 
         <section id="gallery" data-i="0" class="is-on-nav is-on-nav-mob" style="--i:0; --g: 1;">
             <div class="-cont-pd py-10 section-fade gallery-main-wrap">
                 <div class="container mx-auto relative">
                     <h1 class="text-center text-2xl mb-6">แกลเลอรี</h1>
                 </div>
-                <div class="gallery-wrap">
-                    <style>
-                        .gallery-nav-wrap {
-                            --max: 2 !important;
-                        }
-
-                        .gallery-nav-line-bar {
-                            width: calc(100% / (var(--max) + 1)) !important;
-                            left: calc((100% / (var(--max) + 1)) * var(--i)) !important;
-                        }
-
-                        .gallery-rail {
-                            --w: calc(var(--container) * var(--g) / (100/62)) !important;
-                            width: var(--w) !important;
-                            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-                            display: flex;
-                        }
-
-                        .gallery-rail[data-end="1"] {
-                            left: 592px !important;
-                        }
-
-                        .gallery-group-items {
-                            box-sizing: border-box;
-                        }
-
-                        .gallery-group-items:nth-child(1) {
-                            width: 200% !important;
-                            display: grid !important;
-                            gap: 20px !important;
-                            grid-template-columns: repeat(3, 1fr) !important;
-                            grid-template-rows: repeat(3, 1fr) !important;
-                        }
-
-                        .gallery-group-items:nth-child(2) {
-                            width: 100% !important;
-                            display: grid !important;
-                            grid-template-columns: repeat(3, 1fr) !important;
-                            grid-template-rows: repeat(3, 1fr) !important;
-                        }
-
-                        .gallery-group-items:nth-child(3) {
-                            width: 100% !important;
-                            display: grid !important;
-                            gap: 16px !important;
-                            grid-template-rows: repeat(3, 1fr) !important;
-                            grid-template-columns: 1fr !important;
-                        }
-
-                        .gallery-group-item {
-                            grid-column: span 3 !important;
-                            grid-row: span 3 !important;
-                        }
-
-                        .gallery-wrap .gallery-group-items:nth-child(3) .gallery-group-item {
-                            grid-column: auto !important;
-                            grid-row: auto !important;
-                        }
-                    </style>
-                    <div class="gallery-rail" data-end="0" data-i="0" data-max="2" style="--g:3; --max: 2;">
-
-                        <div class="gallery-group-items">
-                            <div class="gallery-group-item">
-                                <div class="gallery-img relative w-full h-96 overflow-hidden">
-                                    <img src="/image/gallery/village.jpg" alt="Gallery 1"
-                                        class="jb-lightbox w-full h-full object-cover" data-jb-lightbox="d"
-                                        style="--img: url('/image/gallery/village.jpg');">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-group-items">
-                            <div class="gallery-group-item mb-4">
-                                <div class="gallery-img relative w-full h-44 overflow-hidden">
-                                    <img src="/image/gallery/village1.jpg" alt="Gallery 2" loading="lazy"
-                                        class="jb-lightbox w-full h-full object-cover" data-jb-lightbox="d"
-                                        style="--img: url('/image/gallery/village1.jpg');">
-                                </div>
-                            </div>
-                            <div class="gallery-group-item">
-                                <div class="gallery-img relative w-full h-44 overflow-hidden">
-                                    <img src="/image/gallery/village2.jpg" alt="Gallery 3" loading="lazy"
-                                        class="jb-lightbox w-full h-full object-cover" data-jb-lightbox="d"
-                                        style="--img: url('/image/gallery/village2.jpg');">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-group-items">
-                            <div class="gallery-group-item">
-                                <div class="gallery-img relative w-full h-96 overflow-hidden">
-                                    <img src="/image/gallery/village_house.jpg" alt="Gallery 4" loading="lazy"
-                                        class="jb-lightbox w-full h-full object-cover" data-jb-lightbox="d"
-                                        style="--img: url('/image/gallery/village_house.jpg');">
-                                </div>
-                            </div>
-                            <div class="gallery-group-item">
-                                <div class="gallery-img relative w-full h-96 overflow-hidden">
-                                    <img src="/image/gallery/gallery_2.jpg" alt="Gallery 5" loading="lazy"
-                                        class="jb-lightbox w-full h-full object-cover" data-jb-lightbox="d"
-                                        style="--img: url('/image/gallery/gallery_2.jpg');">
-                                </div>
-                            </div>
-                            <div class="gallery-group-item">
-                                <div class="gallery-img relative w-full h-96 overflow-hidden">
-                                    <img src="/image/gallery/gallery_4.jpg" alt="Gallery 6" loading="lazy"
-                                        class="jb-lightbox w-full h-full object-cover" data-jb-lightbox="d"
-                                        style="--img: url('/image/gallery/gallery_4.jpg');">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="gallery-nav-wrap">
-                    <div class="gallery-arrow-right" onclick="gallery_arrow(1)"
-                        style="background-image:var(--mc-arrow-up)" alt=""></div>
-                    <div class="gallery-arrow-left -active" onclick="gallery_arrow(-1)"
-                        style="background-image:var(--mc-arrow-up)" alt=""></div>
-
-                    <div class="relative">
-                        <div id="gallery-nav">
-                            <div class="gallery-nav-line">
-                                <div class="gallery-nav-line-bg"></div>
-                                <div class="gallery-nav-line-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <style>
-                    @media (max-width: 1319px) {
+                    /* ล้างค่าเดิม */
+                    .gallery-rail {
+                        display: none !important;
+                    }
 
-                        .gallery-wrap,
-                        .gallery-nav-wrap {
-                            display: block !important;
-                        }
+                    .gallery-slider::-webkit-scrollbar {
+                        display: none;
+                    }
 
-                        .gallery-rail {
-                            width: 300% !important;
-                            left: 0 !important;
-                            transform: translateX(calc(var(--i) * -33.33%)) !important;
-                        }
+                    .gallery-slider {
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+                    }
 
-                        .gallery-group-items {
-                            width: 33.33% !important;
-                            display: grid !important;
-                            grid-template-columns: repeat(12, 1fr) !important;
-                            grid-template-rows: auto !important;
-                            gap: 8px !important;
-                            padding: 0 10px;
-                        }
+                    .gallery-img-hover {
+                        overflow: hidden;
+                    }
 
-                        .gallery-group-items:nth-child(1) .gallery-group-item {
-                            grid-column: span 12 !important;
-                            height: 300px !important;
-                        }
+                    .gallery-img-hover img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.5s ease;
+                        cursor: pointer;
+                    }
 
-                        .gallery-group-items:nth-child(2) .gallery-group-item {
-                            grid-column: span 6 !important;
-                            height: 200px !important;
-                            margin-bottom: 0 !important;
-                        }
+                    .gallery-img-hover:hover img {
+                        transform: scale(1.1);
+                    }
 
-                        .gallery-group-items:nth-child(3) {
-                            grid-template-rows: auto auto !important;
-                        }
+                    .nav-arrow-btn {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 50;
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        background-color: rgba(255, 255, 255, 0.6);
+                        backdrop-filter: blur(4px);
+                        color: #000;
+                        border: 1px solid rgba(255, 255, 255, 0.8);
+                        transition: all 0.3s;
+                        cursor: pointer;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    }
 
-                        .gallery-group-items:nth-child(3) .gallery-group-item:nth-child(1) {
-                            grid-column: span 12 !important;
-                            height: 250px !important;
-                        }
-
-                        .gallery-group-items:nth-child(3) .gallery-group-item:nth-child(n+2) {
-                            grid-column: span 6 !important;
-                            height: 150px !important;
-                        }
-
-                        .gallery-arrow-left,
-                        .gallery-arrow-right {
-                            width: 40px !important;
-                            height: 40px !important;
-                            top: 50% !important;
-                            background-color: rgba(255, 255, 255, 0.8) !important;
-                            border-radius: 50%;
-                            z-index: 20;
-                            position: absolute !important;
-                            background-repeat: no-repeat !important;
-                            background-position: center !important;
-                        }
-
-                        .gallery-arrow-left {
-                            left: 5px !important;
-                            transform: translateY(-50%) rotate(-90deg) !important;
-                        }
-
-                        .gallery-arrow-right {
-                            right: 5px !important;
-                            transform: translateY(-50%) rotate(90deg) !important;
-                        }
-
-                        .gallery-nav-line {
-                            display: none !important;
-                        }
+                    .nav-arrow-btn:hover {
+                        background-color: rgba(255, 255, 255, 1);
+                        transform: translateY(-50%) scale(1.1);
                     }
                 </style>
-                <div class="gallery-m-wrap">
-                    <div class="gallery-norail -cont-pd">
-                        <div class="gallery-group">
 
-                            <div class="gallery-group-item">
-                                <div class="gallery-img gallery-img-mob jb-lightbox" data-jb-lightbox="m">
-                                    <img src="/image/gallery/village.jpg" class="object-cover w-full h-full"
-                                        style="--img: url('/image/gallery/village.jpg');">
-                                </div>
-                            </div>
-                            <div class="gallery-group-item">
-                                <div class="gallery-img gallery-img-mob jb-lightbox" data-jb-lightbox="m">
-                                    <img src="/image/gallery/village1.jpg" class="object-cover w-full h-full"
-                                        style="--img: url('/image/gallery/village1.jpg');">
-                                </div>
-                            </div>
-                            <div class="gallery-group-item">
-                                <div class="gallery-img gallery-img-mob jb-lightbox" data-jb-lightbox="m">
-                                    <img src="/image/gallery/village2.jpg" class="object-cover w-full h-full"
-                                        style="--img: url('/image/gallery/village2.jpg');">
-                                </div>
-                            </div>
+                <div class="relative w-full mb-10 group h-auto md:h-[600px]">
 
-                            <div class="gallery-group-item">
-                                <div class="gallery-img gallery-img-mob jb-lightbox" data-jb-lightbox="m">
-                                    <img src="/image/gallery/village_house.jpg" loading="lazy"
-                                        class="object-cover w-full h-full"
-                                        style="--img: url('/image/gallery/village_house.jpg');">
-                                </div>
-                            </div>
-                            <div class="gallery-group-item">
-                                <div class="gallery-img gallery-img-mob jb-lightbox" data-jb-lightbox="m">
-                                    <img src="/image/gallery/gallery_2.jpg" loading="lazy"
-                                        class="object-cover w-full h-full"
-                                        style="--img: url('/image/gallery/gallery_2.jpg');">
-                                </div>
-                            </div>
+                    <button onclick="scrollGallery(-1)" class="nav-arrow-btn left-4" aria-label="Previous">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button onclick="scrollGallery(1)" class="nav-arrow-btn right-4" aria-label="Next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
 
-                            <div class="gallery-group-item">
-                                <div class="gallery-img gallery-img-mob jb-lightbox" data-jb-lightbox="m">
-                                    <img src="/image/gallery/gallery_4.jpg" loading="lazy"
-                                        class="object-cover w-full h-full"
-                                        style="--img: url('/image/gallery/gallery_4.jpg');">
-                                </div>
-                            </div>
+                    <div id="gallerySlider"
+                        class="gallery-slider flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full h-full pb-0 gap-0">
 
+                        <div class="min-w-full snap-center h-full px-1">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 h-full">
+
+                                <div class="h-64 lg:h-full relative gallery-img-hover">
+                                    <img src="/image/gallery/village.png" class="jb-lightbox" data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/village.png');">
+                                </div>
+
+                                <div class="h-auto lg:h-full relative">
+                                    <div class="grid grid-cols-2 grid-rows-2 gap-2 h-full">
+                                        <div class="gallery-img-hover">
+                                            <img src="/image/gallery/village2.jpg" class="jb-lightbox"
+                                                data-jb-lightbox="d" style="--img: url('/image/gallery/village2.jpg');">
+                                        </div>
+                                        <div class="gallery-img-hover">
+                                            <img src="/image/gallery/village_house.jpg" class="jb-lightbox"
+                                                data-jb-lightbox="d"
+                                                style="--img: url('/image/gallery/village_house.jpg');">
+                                        </div>
+                                        <div class="gallery-img-hover">
+                                            <img src="/image/gallery/village1.jpg" class="jb-lightbox"
+                                                data-jb-lightbox="d" style="--img: url('/image/gallery/village1.jpg');">
+                                        </div>
+                                        <div class="gallery-img-hover">
+                                            <img src="/image/gallery/room-gellery/2-PAKING 2.jpg" class="jb-lightbox"
+                                                data-jb-lightbox="d"
+                                                style="--img: url('/image/gallery/room-gellery/2-PAKING 2.jpg');">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
+
+                        <div class="min-w-full snap-center h-full px-1">
+                            <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-2 h-full">
+
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/3-HALL 2.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/3-HALL 2.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/3-HALL 3.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/3-HALL 3.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/6-BATHROOM 2.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/6-BATHROOM 2.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/6-BATHROOM 3.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/6-BATHROOM 3.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/4-LIVING ROOM 2.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/4-LIVING ROOM 2.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/4-LIVING ROOM 3.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/4-LIVING ROOM 3.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/7-KITCHEN 2.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/7-KITCHEN 2.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/7-KITCHEN 3.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/7-KITCHEN 3.jpg');">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="min-w-full snap-center h-full px-1">
+                            <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-2 h-full">
+
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/8-WASHING 2.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/8-WASHING 2.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/8-WASHING 3.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/8-WASHING 3.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/10-MASTER BEDROOM 4.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/10-MASTER BEDROOM 4.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/10-MASTER BEDROOM 6.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/10-MASTER BEDROOM 6.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/9-WORKING AREA 2.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/9-WORKING AREA 2.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/9-WORKING AREA 4.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/9-WORKING AREA 4.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/10-MASTER BEDROOM 8.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/10-MASTER BEDROOM 8.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/10-MASTER BEDROOM 11.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/10-MASTER BEDROOM 11.jpg');">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="min-w-full snap-center h-full px-1">
+                            <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-2 h-full">
+
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/11-BEDROOM 2-3.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/11-BEDROOM 2-3.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/11-BEDROOM 2-5.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/11-BEDROOM 2-5.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/12-BEDROOM 3-2.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/12-BEDROOM 3-2.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/12-BEDROOM 3-3.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/12-BEDROOM 3-3.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/11-BEDROOM 2-6.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/11-BEDROOM 2-6.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/11-BEDROOM 2-7.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/11-BEDROOM 2-7.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/12-BEDROOM 3-5.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/12-BEDROOM 3-5.jpg');">
+                                </div>
+                                <div class="gallery-img-hover">
+                                    <img src="/image/gallery/room-gellery/12-BEDROOM 3-6.jpg" class="jb-lightbox"
+                                        data-jb-lightbox="d"
+                                        style="--img: url('/image/gallery/room-gellery/12-BEDROOM 3-6.jpg');">
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
 
-                <div class="gallery-nav-m-wrap hidden">
-                    <div id="gallery-m-nav">
-                        <div class="gallery-nav-dot -active"></div>
-                        <div class="gallery-nav-dot"></div>
-                        <div class="gallery-nav-dot"></div>
-                    </div>
-                </div>
+                <script>
+                    function scrollGallery(direction) {
+                        const slider = document.getElementById('gallerySlider');
+                        const scrollAmount = slider.clientWidth;
+                        slider.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+                    }
+                </script>
 
             </div>
         </section>
-
-        <script type="module">
-            import hammerjs from "./js/hammerjs-skypack.js";
-            let el = $('.gallery-m-wrap')
-            let hammerTime = new Hammer(el);
-            hammerTime.get('pan').set({ direction: Hammer.DIRECTION_HORIZONTAL });
-            hammerTime.on("panend", function (ev) {
-
-                let i = 0;
-                var nav = $$('#gallery .gallery-nav-dot');
-                let max = nav.length;
-                for (let b of nav) {
-                    if (b.classList.contains('-active')) {
-                        break;
-                    } else {
-                        i++;
-                    }
-                }
-                xconsolex.log(i)
-                xconsolex.log(max)
-
-                let di = 0;
-                if (ev.deltaX > 20) {
-                    di = -1;
-                } else if (ev.deltaX < -20) {
-                    di = +1;
-                }
-                i = (((i + di) % max) + max) % max
-                xconsolex.log('new i', i)
-                nav[i].click()
-
-            })
-        </script>
 
         <style type="text/css">
         </style>
