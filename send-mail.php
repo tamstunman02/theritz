@@ -43,8 +43,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // ====== Configuration ======
-$gmail_email = "tamstunman02@gmail.com"; // *** เปลี่ยนเป็นอีเมล Gmail ของคุณ ***
-$gmail_password = "@Tam0931329908"; // *** ใส่ App Password จาก Google (https://myaccount.google.com/apppasswords) ***
+$gmail_email = ""; // *** เปลี่ยนเป็นอีเมล Gmail ของคุณ ***
+$gmail_password = "@"; // *** ใส่ App Password จาก Google (https://myaccount.google.com/apppasswords) ***
 $use_smtp = !empty($gmail_password); // ถ้าใส่ password ใช้ SMTP, ถ้าไม่ใช้ mail()
 
 // ====== Prepare Email ======
