@@ -1736,55 +1736,22 @@
                     <div class="form-template form-1">
                         <h1 class="form-title">ลงทะเบียน</h1>
 
-                        <div class="wpcf7 no-js" id="wpcf7-f53210-o1" lang="th" dir="ltr">
-                            <div class="screen-reader-response">
-                                <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                <ul></ul>
-                            </div>
-                            <form action="/send-mail.php" method="post" class="wpcf7-form init"
-                                aria-label="Contact form" novalidate="novalidate" data-status="init">
-                                <div style="display: none;">
-                                    <input type="hidden" name="_wpcf7" value="53210" />
-                                    <input type="hidden" name="_wpcf7_version" value="5.9.8" />
-                                    <input type="hidden" name="_wpcf7_locale" value="th" />
-                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f53210-o1" />
-                                    <input type="hidden" name="_wpcf7_container_post" value="0" />
-                                    <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                                    <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
-                                </div>
+                        <form action="/save-registration.php" method="post" aria-label="Contact form" novalidate="novalidate">
                                 <div class="form-column-2">
                                     <p><label><span>ชื่อ*</span><br />
-                                            <span class="wpcf7-form-control-wrap" data-name="Fname"><input size="40"
-                                                    maxlength="400"
-                                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                    aria-required="true" aria-invalid="false" value="" type="text"
-                                                    name="Fname" /></span> </label>
+                                            <span class="wpcf7-form-control-wrap" data-name="Fname"><input size="40" maxlength="400" aria-required="true" aria-invalid="false" type="text" name="Fname" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" /></span></label>
                                     </p>
                                     <p><label><span>นามสกุล*</span><br />
-                                            <span class="wpcf7-form-control-wrap" data-name="Lname"><input size="40"
-                                                    maxlength="400"
-                                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                    aria-required="true" aria-invalid="false" value="" type="text"
-                                                    name="Lname" /></span> </label>
+                                            <span class="wpcf7-form-control-wrap" data-name="Lname"><input size="40" maxlength="400" aria-required="true" aria-invalid="false" type="text" name="Lname" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" /></span></label>
                                     </p>
                                     <p><label><span>เบอร์โทรศัพท์*</span><br />
-                                            <span class="wpcf7-form-control-wrap" data-name="Tel"><input size="40"
-                                                    maxlength="10" minlength="10"
-                                                    class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
-                                                    aria-required="true" aria-invalid="false" value="" type="tel"
-                                                    name="Tel" /></span> </label>
+                                            <span class="wpcf7-form-control-wrap" data-name="Tel"><input size="40" maxlength="10" minlength="10" aria-required="true" aria-invalid="false" type="tel" name="Tel" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" /></span></label>
                                     </p>
                                     <p><label><span>อีเมล*</span><br />
-                                            <span class="wpcf7-form-control-wrap" data-name="Email"><input size="40"
-                                                    maxlength="400"
-                                                    class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                    aria-required="true" aria-invalid="false" value="" type="email"
-                                                    name="Email" /></span></label>
+                                            <span class="wpcf7-form-control-wrap" data-name="Email"><input size="40" maxlength="400" aria-required="true" aria-invalid="false" type="email" name="Email" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" /></span></label>
                                     </p>
                                     <p><label><span>แบบบ้านที่สนใจ*​</span><br />
-                                            <span class="wpcf7-form-control-wrap" data-name="ModelInterest"><select
-                                                    class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-                                                    aria-required="true" aria-invalid="false" name="ModelInterest">
+                                            <span class="wpcf7-form-control-wrap" data-name="ModelInterest"><select aria-required="true" aria-invalid="false" name="ModelInterest" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required">
                                                     <option value="">&#8212;Please choose an option&#8212;</option>
                                                     <option value="Ritz Haven">Ritz Haven</option>
                                                     <option value="Ritz Eden">Ritz Eden</option>
@@ -1792,9 +1759,7 @@
                                                 </select></span></label>
                                     </p>
                                     <p><label><span>งบประมาณในการซื้อ*</span><br />
-                                            <span class="wpcf7-form-control-wrap" data-name="PriceInterest"><select
-                                                    class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-                                                    aria-required="true" aria-invalid="false" name="PriceInterest">
+                                            <span class="wpcf7-form-control-wrap" data-name="PriceInterest"><select aria-required="true" aria-invalid="false" name="PriceInterest" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required">
                                                     <option value="">&#8212;Please choose an option&#8212;</option>
                                                     <option value="ต่ำกว่า 4.5 ล้านบาท">ต่ำกว่า 4.5 ล้านบาท</option>
                                                     <option value="4.51 - 5 ล้านบาท">4.51 - 5 ล้านบาท</option>
@@ -1806,27 +1771,18 @@
                                                 </select></span></label>
                                     </p>
                                     <p><label><span>เรื่องที่ต้องการติดต่อ</span><br />
-                                            <span class="wpcf7-form-control-wrap" data-name="AppointTime"><select
-                                                    class="wpcf7-form-control wpcf7-select" aria-invalid="false"
-                                                    name="AppointTime">
-                                                    <option value="ไม่ได้ระบุ">&#8212;Please choose an option&#8212;
-                                                    </option>
-                                                    <option value="สนใจเข้าชมบ้านตัวอย่าง">สนใจเข้าชมบ้านตัวอย่าง
-                                                    </option>
+                                            <span class="wpcf7-form-control-wrap" data-name="AppointTime"><select aria-invalid="false" name="AppointTime" class="wpcf7-form-control wpcf7-select">
+                                                    <option value="ไม่ได้ระบุ">&#8212;Please choose an option&#8212;</option>
+                                                    <option value="สนใจเข้าชมบ้านตัวอย่าง">สนใจเข้าชมบ้านตัวอย่าง</option>
                                                     <option value="นัดหมายเข้าชมโครงการ">นัดหมายเข้าชมโครงการ</option>
-                                                    <option value="ต้องการให้เซลล์ติดต่อกลับ">ต้องการให้เซลล์ติดต่อกลับ
-                                                    </option>
-                                                    <option value="ลงทะเบียนร่วมงาน The ritz Grand Opening">
-                                                        ลงทะเบียนร่วมงาน The ritz Grand Opening</option>
+                                                    <option value="ต้องการให้เซลล์ติดต่อกลับ">ต้องการให้เซลล์ติดต่อกลับ</option>
+                                                    <option value="ลงทะเบียนร่วมงาน The ritz Grand Opening">ลงทะเบียนร่วมงาน The ritz Grand Opening</option>
                                                 </select></span></label>
                                     </p>
 
                                     <p><label><span>ช่วงเวลาที่สะดวกให้ติดต่อกลับ</span><br />
-                                            <span class="wpcf7-form-control-wrap" data-name="TimeSlot"><select
-                                                    class="wpcf7-form-control wpcf7-select" aria-invalid="false"
-                                                    name="TimeSlot">
-                                                    <option value="ไม่ได้ระบุ">&#8212;Please choose an option&#8212;
-                                                    </option>
+                                            <span class="wpcf7-form-control-wrap" data-name="TimeSlot"><select aria-invalid="false" name="TimeSlot" class="wpcf7-form-control wpcf7-select">
+                                                    <option value="ไม่ได้ระบุ">&#8212;Please choose an option&#8212;</option>
                                                     <option value="09.00 – 12.00">09.00 – 12.00</option>
                                                     <option value="12.00 – 13.00">12.00 – 13.00</option>
                                                     <option value="13.00 – 18.00">13.00 – 18.00</option>
@@ -1834,47 +1790,14 @@
                                                 </select></span></label>
                                     </p>
                                 </div>
-                                <div id="consent_label">
-                                    <p><span class="wpcf7-form-control-wrap" data-name="consent"><span
-                                                class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"
-                                                id="form-consent"><span class="wpcf7-list-item first last"><label><input
-                                                            type="checkbox" name="consent[]"
-                                                            value="บริษัทฯ จะจัดเก็บข้อมูลของท่าน" /><span
-                                                            class="wpcf7-list-item-label">บริษัทฯ
-                                                            จะจัดเก็บข้อมูลของท่าน</span></label></span></span></span>
+                                <div class="consent_label">
+                                    <p><span class="wpcf7-form-control-wrap" data-name="consent"><span class="wpcf7-form-control wpcf7-checkbox" id="form-consent"><span class="wpcf7-list-item first last"><label><input type="checkbox" name="consent[]" value="บริษัทฯ จะจัดเก็บข้อมูลของท่าน" /><span class="wpcf7-list-item-label">บริษัทฯ จะจัดเก็บข้อมูลของท่าน</span></label></span></span></span>
                                         เพื่อการติดต่อแจ้งข้อมูลข่าวสารที่เกี่ยวข้องกับ ผลิตภัณฑ์ บริการของบริษัทฯ
-                                        และนำเสนอโครงการที่น่าสนใจ คลิกที่นี่เพื่อดู <a
-                                            href="/privacy-policy.html">นโยบายความเป็นส่วนตัว</a>
+                                        และนำเสนอโครงการที่น่าสนใจ คลิกที่นี่เพื่อดู <a href="/privacy-policy.html">นโยบายความเป็นส่วนตัว</a>
                                     </p>
                                 </div>
-                                <p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit"
-                                        value="ลงทะเบียน" />
+                                <p><input class="submit-button wpcf7-submit" type="submit" value="ลงทะเบียน" />
                                 </p>
-                                <footer><!-- สำหรับใส่ในฟอร์มลงทะเบียนโครงการ -->
-                                    <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                        name="form_url_track" />
-                                    <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                        name="form_meta_track" />
-                                    <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                        name="utm_source" />
-                                    <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                        name="utm_medium" />
-                                    <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                        name="utm_campaign" />
-                                    <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                        name="utm_keyword" />
-                                    <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                        name="utm_content" />
-                                    <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                        name="utm_term" />
-                                </footer>
-                                <p style="display: none !important;" class="akismet-fields-container"
-                                    data-prefix="_wpcf7_ak_"><label>&#916;<textarea name="_wpcf7_ak_hp_textarea"
-                                            cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden"
-                                        id="ak_js_1" name="_wpcf7_ak_js" value="224" />
-                                    <script>document.getElementById("ak_js_1").setAttribute("value", (new Date()).getTime());</script>
-                                </p>
-                                <div class="wpcf7-response-output" aria-hidden="true"></div>
                             </form>
                         </div>
                     </div>
@@ -1924,112 +1847,53 @@
                             <div class="form-template form-1">
                                 <h2 class="form-title">ลงทะเบียน</h2>
 
-                                <div class="wpcf7 no-js" id="wpcf7-f53210-o1" lang="th" dir="ltr">
-                                    <div class="screen-reader-response">
-                                        <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                        <ul></ul>
-                                    </div>
-                                    <form action="/send-mail.php" method="post" class="wpcf7-form init"
-                                        aria-label="Contact form" novalidate="novalidate" data-status="init">
-                                        <div style="display: none;">
-                                            <input type="hidden" name="_wpcf7" value="53210" />
-                                            <input type="hidden" name="_wpcf7_version" value="5.9.8" />
-                                            <input type="hidden" name="_wpcf7_locale" value="th" />
-                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f53210-o1" />
-                                            <input type="hidden" name="_wpcf7_container_post" value="0" />
-                                            <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                                            <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
-                                        </div>
+                                <div class="form-wrapper" lang="th" dir="ltr">
+                                    <form action="/save-registration.php" method="post" aria-label="Contact form" novalidate="novalidate">
                                         <div class="form-column-2">
                                             <p><label><span>ชื่อ*</span><br />
-                                                    <span class="wpcf7-form-control-wrap" data-name="Fname"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                            aria-required="true" aria-invalid="false" value=""
-                                                            type="text" name="Fname" /></span> </label>
+                                                    <span class="wpcf7-form-control-wrap" data-name="Fname"><input size="40" maxlength="400" aria-required="true" aria-invalid="false" type="text" name="Fname" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" /></span></label>
                                             </p>
                                             <p><label><span>นามสกุล*</span><br />
-                                                    <span class="wpcf7-form-control-wrap" data-name="Lname"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                            aria-required="true" aria-invalid="false" value=""
-                                                            type="text" name="Lname" /></span> </label>
+                                                    <span class="wpcf7-form-control-wrap" data-name="Lname"><input size="40" maxlength="400" aria-required="true" aria-invalid="false" type="text" name="Lname" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" /></span></label>
                                             </p>
                                             <p><label><span>เบอร์โทรศัพท์*</span><br />
-                                                    <span class="wpcf7-form-control-wrap" data-name="Tel"><input
-                                                            size="40" maxlength="10" minlength="10"
-                                                            class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
-                                                            aria-required="true" aria-invalid="false" value=""
-                                                            type="tel" name="Tel" /></span> </label>
+                                                    <span class="wpcf7-form-control-wrap" data-name="Tel"><input size="40" maxlength="10" minlength="10" aria-required="true" aria-invalid="false" type="tel" name="Tel" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" /></span></label>
                                             </p>
                                             <p><label><span>อีเมล*</span><br />
-                                                    <span class="wpcf7-form-control-wrap" data-name="Email"><input
-                                                            size="40" maxlength="400"
-                                                            class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                            aria-required="true" aria-invalid="false" value=""
-                                                            type="email" name="Email" /></span></label>
+                                                    <span class="wpcf7-form-control-wrap" data-name="Email"><input size="40" maxlength="400" aria-required="true" aria-invalid="false" type="email" name="Email" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" /></span></label>
                                             </p>
                                             <p><label><span>แบบบ้านที่สนใจ*​</span><br />
-                                                    <span class="wpcf7-form-control-wrap"
-                                                        data-name="ModelInterest"><select
-                                                            class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-                                                            aria-required="true" aria-invalid="false"
-                                                            name="ModelInterest">
-                                                            <option value="">&#8212;Please choose an option&#8212;
-                                                            </option>
+                                                    <span class="wpcf7-form-control-wrap" data-name="ModelInterest"><select aria-required="true" aria-invalid="false" name="ModelInterest" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required">
+                                                            <option value="">&#8212;Please choose an option&#8212;</option>
                                                             <option value="Ritz Haven">Ritz Haven</option>
                                                             <option value="Ritz Eden">Ritz Eden</option>
                                                             <option value="Ritz Solace">Ritz Solace</option>
                                                         </select></span></label>
                                             </p>
                                             <p><label><span>งบประมาณในการซื้อ*</span><br />
-                                                    <span class="wpcf7-form-control-wrap"
-                                                        data-name="PriceInterest"><select
-                                                            class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-                                                            aria-required="true" aria-invalid="false"
-                                                            name="PriceInterest">
-                                                            <option value="">&#8212;Please choose an option&#8212;
-                                                            </option>
-                                                            <option value="ต่ำกว่า 4.5 ล้านบาท">ต่ำกว่า 4.5 ล้านบาท
-                                                            </option>
-                                                            <option value="4.51 - 5 ล้านบาท">4.51 - 5 ล้านบาท
-                                                            </option>
-                                                            <option value="5.01 - 5.5 ล้านบาท">5.01 - 5.5 ล้านบาท
-                                                            </option>
+                                                    <span class="wpcf7-form-control-wrap" data-name="PriceInterest"><select aria-required="true" aria-invalid="false" name="PriceInterest" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required">
+                                                            <option value="">&#8212;Please choose an option&#8212;</option>
+                                                            <option value="ต่ำกว่า 4.5 ล้านบาท">ต่ำกว่า 4.5 ล้านบาท</option>
+                                                            <option value="4.51 - 5 ล้านบาท">4.51 - 5 ล้านบาท</option>
+                                                            <option value="5.01 - 5.5 ล้านบาท">5.01 - 5.5 ล้านบาท</option>
                                                             <option value="5.51 -6 ล้านบาท">5.51 -6 ล้านบาท</option>
-                                                            <option value="6.01 - 6.5ล้านบาท">6.01 - 6.5ล้านบาท
-                                                            </option>
-                                                            <option value="6.51 - 7 ล้านบาท">6.51 - 7 ล้านบาท
-                                                            </option>
-                                                            <option value="มากกว่า 7 ล้านบาท">มากกว่า 7 ล้านบาท
-                                                            </option>
+                                                            <option value="6.01 - 6.5ล้านบาท">6.01 - 6.5ล้านบาท</option>
+                                                            <option value="6.51 - 7 ล้านบาท">6.51 - 7 ล้านบาท</option>
+                                                            <option value="มากกว่า 7 ล้านบาท">มากกว่า 7 ล้านบาท</option>
                                                         </select></span></label>
                                             </p>
                                             <p><label><span>เรื่องที่ต้องการติดต่อ</span><br />
-                                                    <span class="wpcf7-form-control-wrap"
-                                                        data-name="AppointTime"><select
-                                                            class="wpcf7-form-control wpcf7-select" aria-invalid="false"
-                                                            name="AppointTime">
-                                                            <option value="ไม่ได้ระบุ">&#8212;Please choose an
-                                                                option&#8212;
-                                                            </option>
-                                                            <option value="สนใจเข้าชมบ้านตัวอย่าง">
-                                                                สนใจเข้าชมบ้านตัวอย่าง</option>
-                                                            <option value="นัดหมายเข้าชมโครงการ">นัดหมายเข้าชมโครงการ
-                                                            </option>
-                                                            <option value="ต้องการให้เซลล์ติดต่อกลับ">
-                                                                ต้องการให้เซลล์ติดต่อกลับ</option>
-                                                            <option value="ลงทะเบียนร่วมงาน The ritz Grand Opening">
-                                                                ลงทะเบียนร่วมงาน The ritz Grand Opening</option>
+                                                    <span class="wpcf7-form-control-wrap" data-name="AppointTime"><select aria-invalid="false" name="AppointTime" class="wpcf7-form-control wpcf7-select">
+                                                            <option value="ไม่ได้ระบุ">&#8212;Please choose an option&#8212;</option>
+                                                            <option value="สนใจเข้าชมบ้านตัวอย่าง">สนใจเข้าชมบ้านตัวอย่าง</option>
+                                                            <option value="นัดหมายเข้าชมโครงการ">นัดหมายเข้าชมโครงการ</option>
+                                                            <option value="ต้องการให้เซลล์ติดต่อกลับ">ต้องการให้เซลล์ติดต่อกลับ</option>
+                                                            <option value="ลงทะเบียนร่วมงาน The ritz Grand Opening">ลงทะเบียนร่วมงาน The ritz Grand Opening</option>
                                                         </select></span></label>
                                             </p>
                                             <p><label><span>ช่วงเวลาที่สะดวกให้ติดต่อกลับ</span><br />
-                                                    <span class="wpcf7-form-control-wrap" data-name="TimeSlot"><select
-                                                            class="wpcf7-form-control wpcf7-select" aria-invalid="false"
-                                                            name="TimeSlot">
-                                                            <option value="ไม่ได้ระบุ">&#8212;Please choose an
-                                                                option&#8212;
-                                                            </option>
+                                                    <span class="wpcf7-form-control-wrap" data-name="TimeSlot"><select aria-invalid="false" name="TimeSlot" class="wpcf7-form-control wpcf7-select">
+                                                            <option value="ไม่ได้ระบุ">&#8212;Please choose an option&#8212;</option>
                                                             <option value="09.00 – 12.00">09.00 – 12.00</option>
                                                             <option value="12.00 – 13.00">12.00 – 13.00</option>
                                                             <option value="13.00 – 18.00">13.00 – 18.00</option>
@@ -2037,48 +1901,13 @@
                                                         </select></span></label>
                                             </p>
                                         </div>
-                                        <div id="consent_label">
-                                            <p><span class="wpcf7-form-control-wrap" data-name="consent"><span
-                                                        class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"
-                                                        id="form-consent"><span
-                                                            class="wpcf7-list-item first last"><label><input
-                                                                    type="checkbox" name="consent[]"
-                                                                    value="บริษัทฯ จะจัดเก็บข้อมูลของท่าน" /><span
-                                                                    class="wpcf7-list-item-label">บริษัทฯ
-                                                                    จะจัดเก็บข้อมูลของท่าน</span></label></span></span></span>
-                                                เพื่อการติดต่อแจ้งข้อมูลข่าวสารที่เกี่ยวข้องกับ ผลิตภัณฑ์
-                                                บริการของบริษัทฯ และนำเสนอโครงการที่น่าสนใจ คลิกที่นี่เพื่อดู <a
-                                                    href="/privacy-policy.html">นโยบายความเป็นส่วนตัว</a>
+                                        <div class="consent_label">
+                                            <p><span class="wpcf7-form-control-wrap" data-name="consent"><span class="wpcf7-form-control wpcf7-checkbox" id="form-consent"><span class="wpcf7-list-item first last"><label><input type="checkbox" name="consent[]" value="บริษัทฯ จะจัดเก็บข้อมูลของท่าน" /><span class="wpcf7-list-item-label">บริษัทฯ จะจัดเก็บข้อมูลของท่าน</span></label></span></span></span>
+                                                เพื่อการติดต่อแจ้งข้อมูลข่าวสารที่เกี่ยวข้องกับ ผลิตภัณฑ์ บริการของบริษัทฯ และนำเสนอโครงการที่น่าสนใจ คลิกที่นี่เพื่อดู <a href="/privacy-policy.html">นโยบายความเป็นส่วนตัว</a>
                                             </p>
                                         </div>
-                                        <p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit"
-                                                value="ลงทะเบียน" />
+                                        <p><input class="submit-button wpcf7-submit" type="submit" value="ลงทะเบียน" />
                                         </p>
-                                        <footer><!-- สำหรับใส่ในฟอร์มลงทะเบียนโครงการ -->
-                                            <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                                name="form_url_track" />
-                                            <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                                name="form_meta_track" />
-                                            <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                                name="utm_source" />
-                                            <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                                name="utm_medium" />
-                                            <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                                name="utm_campaign" />
-                                            <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                                name="utm_keyword" />
-                                            <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                                name="utm_content" />
-                                            <input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden"
-                                                name="utm_term" />
-                                        </footer>
-                                        <p style="display: none !important;" class="akismet-fields-container"
-                                            data-prefix="_wpcf7_ak_"><label>&#916;<textarea name="_wpcf7_ak_hp_textarea"
-                                                    cols="45" rows="8" maxlength="100"></textarea></label><input
-                                                type="hidden" id="ak_js_1" name="_wpcf7_ak_js" value="224" />
-                                            <script>document.getElementById("ak_js_1").setAttribute("value", (new Date()).getTime());</script>
-                                        </p>
-                                        <div class="wpcf7-response-output" aria-hidden="true"></div>
                                     </form>
                                 </div>
                             </div>
@@ -2144,7 +1973,7 @@
                     i.setAttribute('onclick', `moveLabel(this)`);
                 }
 
-                let inp = $$(':is(.wpcf7-text,.wpcf7-date)')
+                let inp = $$('.form-template input[type="text"], .form-template input[type="email"], .form-template input[type="tel"]')
                 for (let i of inp) {
                     i.setAttribute('onfocusout', `checkLabel(this)`);
                     i.setAttribute('onfocusin', `moveLabelFromInput(this)`);
@@ -2158,7 +1987,7 @@
                 parentSelector += `<div class="info-tab-options">`
 
                 parentSelector += `</div>`
-                let slt = $$('.form-template .wpcf7-select')
+                let slt = $$('.form-template select')
                 let skey = 0;
                 for (let s of slt) {
                     let toggle = `<input onchange="checkSpecialOption(${skey})" class="special-form-toggle" type='checkbox'><div  class="special-form-bg"></div>`
@@ -2186,7 +2015,7 @@
             }
             function specialOptSelect(skey, okey) {
                 let thisO = $(`option[data-sokey="key-${skey}-${okey}"]`)
-                let thisS = $(`.form-template .wpcf7-select[data-skey="${skey}"]`)
+                let thisS = $(`.form-template select[data-skey="${skey}"]`)
                 thisO.selected = true
             }
             function checkSpecialOption(skey) {
@@ -2220,7 +2049,7 @@
             }
 
             function checkAllInputLabel() {
-                let inp = $$(':is(.wpcf7-text,.wpcf7-date)')
+                let inp = $$('.form-template input[type="text"], .form-template input[type="email"], .form-template input[type="tel"]')
                 for (let i of inp) {
                     checkLabel(i)
                 }
@@ -2240,19 +2069,46 @@
         </style>
 
         <script type="text/javascript">
+            const consentContainers = $$('.consent_label');
+            const consentCheckboxes = $$('[name="consent[]"]');
+            const submitButtons = $$('input[type="submit"], button[type="submit"]');
 
-            for (let i = 0; i < 2; i++) {
-                $$('#consent_label')[i].outerHTML += `<span class="wpcf7-not-valid-tip validate-consent" data-ispass="true">กรุณาเลือก</span>`
-                $$('.wpcf7-submit')[i].addEventListener('click', validate_consent)
-            }
+            consentContainers.forEach((container) => {
+                const error = document.createElement('span');
+                error.className = 'validate-consent';
+                error.dataset.ispass = 'true';
+                error.innerText = 'กรุณาเลือก';
+                container.appendChild(error);
+            });
 
-
-            function validate_consent() {
-                let el = $$('[name="consent[]"]');
-                for (let i = 0; i < 2; i++) {
-                    $$('.validate-consent')[i].dataset.ispass = el[i].checked
+            function validateConsentForForm(form) {
+                const checkbox = form.querySelector('[name="consent[]"]');
+                const error = form.querySelector('.validate-consent');
+                if (!checkbox || !error) {
+                    return true;
                 }
+                const ok = checkbox.checked;
+                error.dataset.ispass = ok ? 'true' : 'false';
+                return ok;
             }
+
+            submitButtons.forEach((button) => {
+                button.addEventListener('click', function (event) {
+                    const form = button.closest('form');
+                    if (form && !validateConsentForForm(form)) {
+                        event.preventDefault();
+                    }
+                });
+            });
+
+            consentCheckboxes.forEach((checkbox) => {
+                checkbox.addEventListener('change', function () {
+                    const form = checkbox.closest('form');
+                    if (form) {
+                        validateConsentForForm(form);
+                    }
+                });
+            });
         </script>
 
 
